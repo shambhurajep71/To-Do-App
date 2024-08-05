@@ -9,20 +9,41 @@
 </head>
 
 <body>
-    <div class="appContainer">
-        <section class="navbar">
-            <div id="apply_filter"> Apply filter:</div>
-            <select name="filter" id="filter">
-                <option value="None"> None</option>
-                <option value="To Do">To Do</option>
-                <option value="In Progress"> In Progress</option>
-                <option value="Testing">Testing</option>
-                <option value="Done">Done</option>
-            </select>
-            <div class="name"> To Do App</div>
-            <div class="createTask"> Create Task </div>
-        </section>
+    <!-- Nav bar -->
+    <div class="navbar">
+        <div class="filter_conatiner">
+            <div class="to_do">To Do</div>
+            <div class="in_progress"> In Progress</div>
+            <div class="testing"> Testing</div>
+            <div class="done">Done</div>
+        </div>
+        <div class="app_name">To Do App</div>
+        <div class="create_new_task_btn"> Create</div>
     </div>
+    <!-- Created Tickets Container -->
+     <div class="main_created_ticket_container">
+        <div class="created_ticket">
+            <div class="created_ticket_status"> To Do</div>
+            <div class="created_ticket_id">bajbs</div>
+            <div class="created_ticket_textarea">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, est?</div>
+            <div class="created_ticket_edit">Edit</div>
+            <div class="created_ticket_delete">Delete</div>
+        </div>
+     </div>
+    <!-- New task creation -->
+    <div class="create_new_ticket">
+        <textarea class="ticket_textarea" placeholder="Enter Your Task Information"></textarea>
+        <div class="new_ticket_conatiner">
+            <div class="to_do new_ticket">To Do</div>
+            <div class="in_progress new_ticket"> In Progress</div>
+            <div class="testing new_ticket"> Testing</div>
+            <div class="done new_ticket">Done</div>
+            <div class="create new_ticket">Create</div>
+            <div class="cancel">&#10006</div>
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
