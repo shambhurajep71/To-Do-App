@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    word-wrap: break-word;
 }
 
 /* Nav bar Css */
@@ -148,11 +149,18 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    height: 80%;
+    width: 25%;
+    background-color: aquamarine;
+    z-index: 7;
+}
+.ticket_button_container{
     height: 100%;
     width: 25%;
     background-color: aquamarine;
-    z-index: 5;
-    position: relative;
+    align-items: center;
+    position: absolute;
+    right: 0;
 }
 
 .cancel {
@@ -170,7 +178,7 @@
     box-shadow: -2px 2px 2px black;
     cursor: pointer;
     border-radius: 2px;
-    z-index: -7;
+    z-index: 7;
 }
 .cancel:active {
     transform: translateY(1px);
@@ -180,6 +188,10 @@
 .new_ticket:hover {
     background-color: azure;
     cursor: pointer;
+}
+.active_ticket_status{
+    background-color: azure;
+    border: 2px solid black;
 }
 .create {
     height: 40px;
@@ -196,6 +208,7 @@
     position: absolute;
     bottom: 10px;
     right: 20px;
+    z-index: 7;
 }
 .create:active{
     transform: translateY(3px);
@@ -218,7 +231,7 @@
     border-radius: 10px;
     position: relative;
 }
-.created_ticket_status{
+.status{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     /* background-color: rgb(88, 224, 88); */
@@ -230,7 +243,7 @@
     padding-top: 10px;
     padding-bottom: 10px;
 }
-.created_ticket_id{
+.id{
     background-color: rgb(224, 133, 88);
     height: 40px;
     font-size: 20px;
@@ -240,7 +253,15 @@
     padding-top: 10px;
     padding-bottom: 10px;
 }
-.created_ticket_edit{
+.textarea {
+    color: black;
+    font-size: 25px;
+    display: -webkit-box;
+    -webkit-line-clamp:6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.edit{
     background-color: blue;
     color: white;
     font-size: 15px;
@@ -259,11 +280,35 @@
     box-shadow: 2px 2px 2px rgb(0, 0, 0);
     cursor: pointer;
 }
-.created_ticket_edit:active{
+
+.edit:active{
     transform: translateY(2px);
     box-shadow: 1px 1px 2px rgb(0, 0, 0);
 }
-.created_ticket_delete{
+.update{
+    background-color: blue;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    height: 30px;
+    width: 60px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: absolute;
+    border-radius: 5px;
+    bottom: 0;
+    right: 0px;
+    margin-bottom: 5px;
+    margin-right: 70px;
+    box-shadow: 2px 2px 2px rgb(0, 0, 0);
+    cursor: pointer;
+}
+.update:active{
+    transform: translateY(2px);
+    box-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+.delete{
     background-color: rgb(253, 7, 7);
     color: white;
     font-size: 15px;
@@ -282,7 +327,30 @@
     box-shadow: 2px 2px 2px rgb(0, 0, 0);
     cursor: pointer;
 }
-.created_ticket_delete:active{
+.delete:active{
+    transform: translateY(2px);
+    box-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+.cancel_edit{
+    background-color: rgb(253, 7, 7);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    height: 30px;
+    width: 60px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: absolute;
+    border-radius: 5px;
+    bottom: 0;
+    right: 0px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    box-shadow: 2px 2px 2px rgb(0, 0, 0);
+    cursor: pointer;
+}
+.cancel_edit:active{
     transform: translateY(2px);
     box-shadow: 1px 1px 2px rgb(0, 0, 0);
 }
